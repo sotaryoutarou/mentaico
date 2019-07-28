@@ -34,4 +34,15 @@ alaskaPollock の親クラス
 
 ### Kitchen
 
-調理の処理をまとめる
+調理の処理を実行する
+
+### recipe
+
+レシピディレクトリ、traitでレシピを記述しておく
+
+#### mentaico
+
+明太子の作り方を示すtrait
+getmentaico の引数でタラを渡すと明太子を作ってくれる
+
+[参照](https://www.orangepage.net/daily/284)

@@ -44,12 +44,12 @@ trait CookMentaico
             throw new Exception('This fish is not AlaskaPollock');
         }
 
-        $fishEgg = $fish->egg;
+        $this->fishEgg = $fish->egg;
 
         // ケースに出汁を入れる
-        $case = getDashi;
+        $case = $this->getDashi($this->konbu, $this->katsuo, $this->alcohol, $this->mirin);
         // だしで卵をつける
-        $mentaico = $this->pickleEgg($case, $fishEgg);
+        $mentaico = $this->pickleEgg($this->case, $this->fishEgg);
 
         return $mentaico;
     }
@@ -61,7 +61,7 @@ trait CookMentaico
 
     public function pickleEgg($case, $fishEgg)
     {
-        if ($fishEgg != 150) {
+        if ($this->fishEgg != 150) {
             throw new Exception('Egg weight is different');
         }
 

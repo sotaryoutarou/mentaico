@@ -10,7 +10,7 @@ class Fish
     public $freshWater = false;
 
     // 海水魚
-    public $freshWater = false;
+    public $seaWater = false;
 
     // 頭
     public $head;

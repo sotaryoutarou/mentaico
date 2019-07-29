@@ -8,5 +8,5 @@ require_once 'Gadidae.php';
 class AlaskaPollock extends Gadidae
 {
     // 魚卵150g
-    $egg = 150;
+    public $egg = 150;
 }

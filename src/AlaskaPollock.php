@@ -1,9 +1,8 @@
 <?php
 
 require_once 'Gadidae.php';
-
 /**
- * スケトウダラを示すクラス
+ * スケトウダラを表現するクラス
  */
 class AlaskaPollock extends Gadidae
 {

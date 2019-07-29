@@ -1,18 +1,17 @@
 <?php
-/**
- * キッチンを示すクラス
- * 材料を使って料理する
- */
-
 require_once 'AlaskaPollock.php';
 require_once(dirname(__FILE__) . '/recipe/CookMentaico.php');
 require_once(dirname(__FILE__) . '/recipe/CookWhiteRice.php');
-
+/**
+ * キッチンを表現するクラス
+ * 材料を使って料理する
+ */
 class Kitchen
 {
     use CookMentaico;
     use CookWhiteRice;
 
+    // 明太子ごはんを調理する
     public function getMentaicoRice()
     {
         $tara = new AlaskaPollock();

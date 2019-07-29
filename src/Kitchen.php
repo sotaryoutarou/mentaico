@@ -4,18 +4,24 @@
  * 材料を使って料理する
  */
 
-require_once 'Gadidae.php';
-require_once 'recipe/CookMentaico.php';
+require_once 'AlaskaPollock.php';
+require_once(dirname(__FILE__) . '/recipe/CookMentaico.php');
+require_once(dirname(__FILE__) . '/recipe/CookWhiteRice.php');
 
 class Kitchen
 {
     use CookMentaico;
+    use CookWhiteRice;
 
-    function getMentaicoRice(){
-        $mentaico = getMentaico();
+    public function getMentaicoRice()
+    {
+        $tara = new AlaskaPollock();
+        $mentaico = $this->getMentaico($tara);
 
-        if(get_class($mentaico) == 'mentaico') {
-            print ('明太子の出来上がり！');
+        $rice = $this->getRice();
+
+        if (get_class($mentaico) === 'Mentaico' && get_class($rice) === 'Rice') {
+            print('明太子ご飯の出来上がり！');
         }
     }
 }

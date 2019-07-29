@@ -1,6 +1,6 @@
 <?php
 // エントリーポイント
-require_once 'Kitchen.php';
+require_once 'src/Kitchen.php';
 
 // 神はキッチンを創造し
 $kitchen = new Kitchen();

@@ -10,11 +10,7 @@ trait CookWhiteRice
     // 水(cc)
     private $water = 200;
 
-    /**
-     * 魚を材料に明太子を料理する
-     * @param  AlaskaPollock $fish
-     * @return Mentaico
-     */
+    // お米を炊く
     public function getRice()
     {
         return new Rice($this->rice, $this->water);

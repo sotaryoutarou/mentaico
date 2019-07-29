@@ -1,9 +1,7 @@
 <?php
-
 require_once 'Fish.php';
-
 /**
- * タラを示すクラス
+ * タラを表現するクラス
  */
 class Gadidae extends Fish
 {

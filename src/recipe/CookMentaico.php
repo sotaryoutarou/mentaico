@@ -30,13 +30,8 @@ trait CookMentaico
     private $fishEgg;
 
     // 漬ける用の容器
-    private $case;
+    private $tapper;
 
-    /**
-     * 魚を材料に明太子を料理する
-     * @param  AlaskaPollock $fish
-     * @return Mentaico
-     */
     public function getMentaico($fish)
     {
         // スケトウダラでなければ例外を投げる
@@ -44,27 +39,26 @@ trait CookMentaico
             throw new Exception('This fish is not AlaskaPollock');
         }
 
+        // スケトウダラを捌いて魚卵を取り出す
         $this->fishEgg = $fish->egg;
 
         // ケースに出汁を入れる
-        $case = $this->getDashi($this->konbu, $this->katsuo, $this->alcohol, $this->mirin);
+        $tapper = $this->getDashi($this->konbu, $this->katsuo, $this->alcohol, $this->mirin);
         // だしで卵をつける
-        $mentaico = $this->pickleEgg($this->case, $this->fishEgg);
+        $mentaico = $this->pickleEgg($this->tapper, $this->fishEgg);
 
         return $mentaico;
     }
 
+    // 明太子を漬ける出汁を作る
     public function getDashi($konbu, $katsuo, $alcohol, $mirin)
     {
         return new Dashi($konbu, $katsuo, $alcohol, $mirin);
     }
 
-    public function pickleEgg($case, $fishEgg)
+    // 出汁で魚卵を漬ける
+    public function pickleEgg($tapper, $fishEgg)
     {
-        if ($this->fishEgg != 150) {
-            throw new Exception('Egg weight is different');
-        }
-
-        return new Mentaico();
+        return new Mentaico($tapper, $fishEgg);
     }
 }

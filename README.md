@@ -17,11 +17,13 @@
 ### Fish
 
 生物学的分類としての魚を表すクラス
+
 gadidae の親クラス
 
 ### Gadidae
 
 生物学的分類としてのタラを表すクラス
+
 alaskaPollock の親クラス
 
 ### AlaskaPollock
@@ -47,6 +49,7 @@ alaskaPollock の親クラス
 ### Mentaico
 
 調理ずみの明太子を表す
+
 炭水化物との相性が抜群
 
 ### Kitchen
@@ -62,9 +65,11 @@ alaskaPollock の親クラス
 #### CookMentaico
 
 明太子の作り方を表すtrait
+
 [参照](https://www.orangepage.net/daily/284)
 
 #### CookWhiteRice
 
 お米の炊き方を表すtrait
+
 [参照](https://cookpad.com/cooking_basics/13326)
